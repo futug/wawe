@@ -1,0 +1,123 @@
+.features {
+  background-color: #f8f8f8;
+}
+
+.features__inner-top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5.1rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.features__item {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 1.2rem;
+}
+.feauters__item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  justify-self: center;
+  .features__item-pic {
+    width: 3.9rem;
+    max-height: 3.6rem;
+  }
+  .features__item-title {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 117%;
+    letter-spacing: 0.04rem;
+    color: $primetext;
+    text-transform: uppercase;
+  }
+}
+.features__article {
+  max-width: 25rem;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  letter-spacing: 0.04rem;
+  color: $primetext;
+}
+
+.features__inner-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7rem;
+  padding-bottom: 14.3rem;
+  flex-wrap: wrap;
+  gap: 2.1rem;
+}
+
+.features__stats-item {
+  margin-top: 0.7rem;
+}
+
+.features__stats-item:first-child {
+  margin-top: 0;
+}
+
+.features__stats-pic {
+  max-width: 14.3rem;
+  display: inline-block;
+}
+
+.features__stats-item:nth-child(2) .features__stats-pic {
+  max-width: 17.3rem;
+}
+
+.features__stats-item:nth-child(3) .features__stats-pic {
+  max-width: 20.9rem;
+}
+.features__stats-indicator {
+  display: inline-block;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 75%;
+  letter-spacing: 0;
+  color: #242121;
+  margin-left: 0.7rem;
+}
+
+.features__stats-description {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 129%;
+  letter-spacing: 0.04rem;
+}
+
+.features__article-item {
+  max-width: 42.8rem;
+  font-family: "Roboto Condensed";
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 129%;
+  letter-spacing: 0.04rem;
+  text-align: left;
+  margin-top: 2.1rem;
+}
+
+.features__article-item:first-child {
+  margin-top: 0;
+}
+// .features__stats-pic::after {
+//   content: "85%";
+//   font-family: "Roboto Condensed";
+//   font-size: 1.7rem;
+//   font-weight: 400;
+//   line-height: 1.2rem;
+//   letter-spacing: 0.04rem;
+//   text-align: left;
+//   color: $primetext;
+//   display: block;
+// }
