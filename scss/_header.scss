@@ -1,0 +1,136 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  background: url(/img/Group_4.jpg) center / cover;
+  background-color: #3a545a;
+  background-repeat: no-repeat;
+}
+
+.header__inner-top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 2.5rem;
+
+  img {
+    width: 4.3rem;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .navigation__list {
+    display: flex;
+    justify-content: space-between;
+    width: 50.7rem;
+    gap: 3.2rem;
+    margin-left: -4.2rem;
+    li {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.7rem;
+      line-height: 2rem;
+      letter-spacing: 0.04rem;
+      a {
+        color: white;
+        padding-bottom: 0.7rem;
+      }
+    }
+  }
+}
+.navigation__link:hover {
+  border-bottom: 0.1rem solid $decoration;
+}
+
+.header__inner-bottom {
+  margin-top: 10rem;
+  .header__title {
+    font-family: "Raleway";
+    font-size: 14.3rem;
+    font-weight: 700;
+    line-height: 16.8rem;
+    letter-spacing: 0.04rem;
+    text-align: center;
+    color: $primetext;
+    text-transform: uppercase;
+    word-wrap: break-word;
+  }
+  .header__subtitle {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    text-align: center;
+    letter-spacing: 0.04rem;
+  }
+  img {
+    margin: 15rem auto 6rem auto;
+    animation: down-up 2s infinite;
+    cursor: pointer;
+  }
+  p {
+    color: $primetext;
+  }
+}
+
+@keyframes down-up {
+  0% {
+    opacity: 1;
+    transform: translateY(-0.7rem);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(0.7rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-0.7rem);
+  }
+}
+
+.header__burger {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .header__inner-top {
+    .navigation {
+      display: none;
+    }
+  }
+
+  .header__burger {
+    display: block;
+    width: 3rem;
+    position: relative;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+  }
+
+  .header__burger-item {
+    width: 3rem;
+    height: 0.3rem;
+    background-color: #fff;
+  }
+
+  .header__burger-item::after {
+    content: "";
+    width: 3rem;
+    height: 0.3rem;
+    background-color: #fff;
+    position: absolute;
+    bottom: -0.9rem;
+  }
+
+  .header__burger-item::before {
+    content: "";
+    width: 3rem;
+    height: 0.3rem;
+    background-color: #fff;
+    position: absolute;
+    top: -0.9rem;
+  }
+}
