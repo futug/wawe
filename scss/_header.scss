@@ -134,3 +134,45 @@
     top: -0.9rem;
   }
 }
+
+@media (max-width: 767px) {
+  .header__inner-bottom {
+    margin-top: 15rem;
+  }
+  .header__inner-bottom .header__title {
+    font-family: "Raleway";
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 8rem;
+    letter-spacing: 0.04rem;
+    text-align: center;
+    color: $primetext;
+    text-transform: uppercase;
+    word-wrap: break-word;
+  }
+
+  .header__inner-bottom .header__subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__inner-bottom {
+    margin-top: 10rem;
+  }
+  .header__inner-bottom .header__title {
+    font-family: "Raleway";
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 8rem;
+    letter-spacing: 0.04rem;
+    text-align: center;
+    color: $primetext;
+    text-transform: uppercase;
+    word-wrap: break-word;
+  }
+
+  .header__decore {
+    margin-top: 7rem !important;
+  }
+}
