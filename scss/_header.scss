@@ -3,7 +3,7 @@
   height: 100vh;
   overflow: hidden;
 
-  background: url("/img/Group_4-min.jpg") center / cover;
+  background: url("./img/Group_4-min.jpg") center / cover;
   background-color: #3a545a;
   background-repeat: no-repeat;
 }
@@ -71,6 +71,7 @@
     margin: 15rem auto 6rem auto;
     animation: down-up 2s infinite;
     cursor: pointer;
+    width: 1.4;
   }
   p {
     color: $primetext;
