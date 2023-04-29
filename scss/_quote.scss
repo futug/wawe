@@ -1,0 +1,30 @@
+.quote {
+  background-color: #f8f8f8;
+}
+
+.quote__item {
+  text-align: center;
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.57rem;
+  line-height: 111%;
+  letter-spacing: 0.04rem;
+  color: $primetext;
+  padding-top: 5.7rem;
+  padding-bottom: 5.7rem;
+  position: relative;
+}
+
+.quote__item:after {
+  content: "Нэт Янг, первый Чемпион Мира по сёрфингу";
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 129%;
+  letter-spacing: 0.04rem;
+  position: absolute;
+  bottom: 33%;
+  right: 21.5%;
+}

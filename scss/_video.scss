@@ -1,0 +1,58 @@
+.video {
+  height: 100vh;
+}
+
+.video__wrapper {
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  margin-top: 14.3rem;
+  position: relative;
+}
+
+.video__play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  fill: #373a39;
+  transition: 0.4s linear;
+  fill-opacity: 0.5;
+}
+
+.video__wrapper:hover .video__play-button {
+  fill-opacity: 1;
+}
+
+.video__play-button:hover {
+  fill: #f8f8f8;
+}
+
+.video__achievments {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  flex-wrap: wrap;
+  margin-top: 14.3rem;
+  .video__achievments-score {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.5rem;
+    line-height: 5.35rem;
+    letter-spacing: 0.04rem;
+    color: $seconddark;
+    text-align: center;
+  }
+  .video__achievments-description {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 129%;
+    text-align: center;
+    letter-spacing: 0.04rem;
+    color: #242121;
+    margin-top: 0.35rem;
+  }
+}

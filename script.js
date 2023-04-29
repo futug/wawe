@@ -1,3 +1,19 @@
+(function () {
+  const innerTop = document.querySelector(".header__inner-top");
+  const innerBottom = document.querySelector(".header__inner-bottom");
+  const header = document.querySelector(".header");
+  window.onscroll = () => {
+    if (window.pageYOffset > 30) {
+      // console.log("zdarova zaebal");
+      innerTop.classList.add("dissapear");
+      innerBottom.classList.add("dissapear");
+    } else {
+      innerTop.classList.remove("dissapear");
+      innerBottom.classList.remove("dissapear");
+    }
+  };
+})();
+
 const btn = document.querySelector(".gallery__show-more-btn"),
   cards = Array.from(document.querySelectorAll(".gallery__item"));
 

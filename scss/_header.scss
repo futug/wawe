@@ -13,6 +13,7 @@
   align-items: center;
   width: 100%;
   margin-top: 2.5rem;
+  transition: 0.4s;
 
   img {
     width: 4.3rem;
@@ -47,6 +48,7 @@
 
 .header__inner-bottom {
   margin-top: 10rem;
+  transition: 0.8s;
   .header__title {
     font-family: "Raleway";
     font-size: 14.3rem;

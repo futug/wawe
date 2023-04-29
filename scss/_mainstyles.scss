@@ -3,3 +3,12 @@
   margin: 0 auto;
   padding: 0 2rem;
 }
+
+.dissapear {
+  opacity: 0;
+  transition: 1s linear;
+}
+
+.hidden {
+  display: none !important;
+}

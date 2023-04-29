@@ -1,7 +1,18 @@
+@charset "UTF-8";
 .container {
   max-width: 86rem;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+.dissapear {
+  opacity: 0;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .header {
@@ -22,6 +33,8 @@
           align-items: center;
   width: 100%;
   margin-top: 2.5rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 .header__inner-top img {
   width: 4.3rem;
@@ -64,6 +77,8 @@
 
 .header__inner-bottom {
   margin-top: 10rem;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 .header__inner-bottom .header__title {
   font-family: "Raleway";
@@ -634,6 +649,99 @@
   color: #fff;
 }
 
-.hidden {
-  display: none !important;
+.quote {
+  background-color: #f8f8f8;
+}
+
+.quote__item {
+  text-align: center;
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.57rem;
+  line-height: 111%;
+  letter-spacing: 0.04rem;
+  color: #242121;
+  padding-top: 5.7rem;
+  padding-bottom: 5.7rem;
+  position: relative;
+}
+
+.quote__item:after {
+  content: "Нэт Янг, первый Чемпион Мира по сёрфингу";
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 129%;
+  letter-spacing: 0.04rem;
+  position: absolute;
+  bottom: 33%;
+  right: 21.5%;
+}
+
+.video {
+  height: 100vh;
+}
+
+.video__wrapper {
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  margin-top: 14.3rem;
+  position: relative;
+}
+
+.video__play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+  fill: #373a39;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  fill-opacity: 0.5;
+}
+
+.video__wrapper:hover .video__play-button {
+  fill-opacity: 1;
+}
+
+.video__play-button:hover {
+  fill: #f8f8f8;
+}
+
+.video__achievments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 7rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 14.3rem;
+}
+.video__achievments .video__achievments-score {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 5.35rem;
+  letter-spacing: 0.04rem;
+  color: #01353e;
+  text-align: center;
+}
+.video__achievments .video__achievments-description {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 129%;
+  text-align: center;
+  letter-spacing: 0.04rem;
+  color: #242121;
+  margin-top: 0.35rem;
 }
