@@ -1,0 +1,27 @@
+.gallery__filter-buttons {
+  margin-top: 13rem;
+  display: flex;
+  gap: 1.5rem;
+}
+.gallery__filter-btn {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 75%;
+  letter-spacing: 0.04rem;
+  color: $primetext;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery__filter-btn:hover {
+  color: $decoration;
+}
+
+.gallery__filter-btn--active {
+  color: $decoration;
+}

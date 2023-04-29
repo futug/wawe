@@ -1,0 +1,31 @@
+.goals__content {
+  display: grid;
+  justify-content: end;
+  grid-template-columns: 1fr 1fr;
+}
+
+.goals__pic {
+  max-width: 68.6rem;
+  width: 100%;
+}
+
+.goals__textcontent {
+  justify-self: center;
+  max-width: fit-content;
+  //   margin-left: 7rem;
+  .goals__article {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 129%;
+    letter-spacing: 0.04rem;
+    color: $primetext;
+    max-width: 36.2rem;
+    margin-top: 2.1rem;
+  }
+}
+
+.goals__textcontent p:first-of-type {
+  margin-top: 7rem;
+}
