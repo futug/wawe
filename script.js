@@ -81,3 +81,40 @@ for (let anchor of anchors) {
     });
   });
 }
+
+const gallery = document.querySelector(".gallery");
+const galleryBottom = gallery.getBoundingClientRect().bottom + window.scrollY;
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= galleryBottom) {
+    const counterItems = document.querySelectorAll(".video__achievments-score");
+
+    function animateValue(item, start, end, duration) {
+      let range = end - start;
+      let current = start;
+      let increment = end > start ? 1 : -1;
+      let stepTime = Math.abs(Math.floor(duration / range));
+      let timer = setInterval(() => {
+        current += increment;
+        item.textContent = current;
+        if (current === end) {
+          clearInterval(timer);
+        }
+      }, stepTime);
+    }
+
+    function animateCounters() {
+      // Проходим по каждому элементу счетчика
+      counterItems.forEach((counterEl) => {
+        const target = parseInt(counterEl.dataset.target, 10);
+        let count = parseInt(counterEl.textContent, 10);
+
+        // Запускаем анимацию только если значение меньше цели
+        if (count < target) {
+          animateValue(counterEl, count, target, 1000);
+        }
+      });
+    }
+
+    animateCounters();
+  }
+});
