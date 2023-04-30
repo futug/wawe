@@ -236,6 +236,8 @@
   }
   .header__decore {
     margin-top: 7rem !important;
+    width: 1.42rem;
+    height: 4.85rem;
   }
 }
 .title-group {
@@ -408,7 +410,7 @@
 }
 .feauters__item-header .features__item-pic {
   width: 3.9rem;
-  max-height: 3.6rem;
+  height: 3.6rem;
 }
 .feauters__item-header .features__item-title {
   font-family: "Roboto Condensed";
@@ -455,16 +457,19 @@
 }
 
 .features__stats-pic {
-  max-width: 14.3rem;
+  width: 14.3rem;
   display: inline-block;
+  height: 1.1rem;
 }
 
 .features__stats-item:nth-child(2) .features__stats-pic {
-  max-width: 17.3rem;
+  width: 17.3rem;
+  height: 1.1rem;
 }
 
 .features__stats-item:nth-child(3) .features__stats-pic {
-  max-width: 20.9rem;
+  width: 20.9rem;
+  height: 1.1rem;
 }
 
 .features__stats-indicator {
@@ -1377,4 +1382,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 4.5rem;
+}
+
+.footer__logo-picture {
+  width: 4.5rem;
+  height: 4.5rem;
 }
