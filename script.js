@@ -40,11 +40,9 @@ function responseFirst() {
 responseFirst();
 
 const swiper = new Swiper(".swiper", {
-  // Optional parameters
   direction: "horizontal",
   loop: true,
 
-  // If we need pagination
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",
@@ -52,4 +50,11 @@ const swiper = new Swiper(".swiper", {
     dynamicBullets: true,
     dynamicMainBullets: 10,
   },
+});
+
+document.querySelector(".contacts__form-btn").addEventListener("click", () => {
+  document.querySelector(".contacts__popup").classList.remove("hidden");
+  document.querySelector(".contacts__popup").addEventListener("click", () => {
+    document.querySelector(".contacts__popup").classList.add("hidden");
+  });
 });

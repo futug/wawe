@@ -181,7 +181,11 @@
               </p>
             </div>
             <div class="goals__pic-container">
-              <img class="goals__pic" loading="lazy" src="./img/goals__pic.jpg" alt="surfer on the wave" />
+              <picture>
+                <source class="goals__pic" srcset="./img/goals__pic.jpg" type="image/jpeg" alt="surfer on the wave" />
+                <source class="goals__pic" srcset="/img/goals__pic.webp" type="image/webp" alt="surfer on the wave" />
+                <img class="goals__pic" loading="lazy" src="./img/goals__pic.jpg" alt="surfer on the wave" />
+              </picture>
             </div>
           </div>
         </section>
@@ -465,6 +469,12 @@
             <h2 class="title-group__title">оставить заявку</h2>
           </div>
           <div class="contacts__form-container">
+            <div class="contacts__popup hidden">
+              <div class="contacts__popup-inner">
+                <p class="contacts__popup-message">Спасибо, что вы с нами! Мы будем рады связаться с вами, как можно скорее!</p>
+                <button class="contacts__popup-button">Ok!</button>
+              </div>
+            </div>
             <form class="contacts__form" action="#">
               <input class="contacts__form-name" type="text" placeholder="Имя" />
               <input class="contacts__form-tel" type="text" placeholder="Телефон" />
@@ -476,7 +486,7 @@
                 rows="10"
                 placeholder="Оставьте сообщение, и мы свяжемся с Вами в ближайшее время"
               ></textarea>
-              <button class="contacts__form-btn">Отправить</button>
+              <button class="contacts__form-btn" type="button">Отправить</button>
             </form>
             <div class="contacts__textarea">
               <p class="contacts__text">Есть вопрос? Вы можете связаться с нами:</p>

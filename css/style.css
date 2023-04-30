@@ -20,6 +20,7 @@
   height: 100vh;
   overflow: hidden;
   background: url("../img/Group_4-min.jpg") center/cover;
+  background: url("../img/Group_4-min.webp") center/cover;
   background-color: #3a545a;
   background-repeat: no-repeat;
 }
@@ -569,6 +570,10 @@
   padding-bottom: 13rem;
 }
 
+.gallery__item {
+  overflow: hidden;
+}
+
 .gallery__item-pic {
   -o-object-fit: cover;
      object-fit: cover;
@@ -576,23 +581,15 @@
   height: 21rem;
   cursor: pointer;
   position: relative;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
-.gallery__item-pic::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: rgba(51, 51, 51, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.gallery__item-pic:hover::after {
-  opacity: 1;
+.gallery__item-pic:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .gallery__item-pic--big {
@@ -751,6 +748,8 @@
   min-height: 57.1rem;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(36, 33, 33, 0.5)), to(rgba(36, 33, 33, 0.5))), url("../img/slider-item.jpg") no-repeat center/cover;
   background: linear-gradient(rgba(36, 33, 33, 0.5), rgba(36, 33, 33, 0.5)), url("../img/slider-item.jpg") no-repeat center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(36, 33, 33, 0.5)), to(rgba(36, 33, 33, 0.5))), url("../img/slider-item.webp") no-repeat center/cover;
+  background: linear-gradient(rgba(36, 33, 33, 0.5), rgba(36, 33, 33, 0.5)), url("../img/slider-item.webp") no-repeat center/cover;
   cursor: -webkit-grab;
   cursor: grab;
 }
@@ -949,6 +948,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 31px;
+  position: relative;
 }
 
 .contacts__form {
@@ -1292,6 +1292,58 @@
 
 .contacts__link:hover {
   color: #00b2a0;
+}
+
+.contacts__popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 999;
+}
+
+.contacts__popup-inner {
+  background-color: #fff;
+  padding: 2rem;
+  opacity: 1;
+}
+.contacts__popup-inner .contacts__popup-message {
+  max-width: 29rem;
+}
+.contacts__popup-inner .contacts__popup-button {
+  background-color: transparent;
+  border: 1px solid #c4c4c4;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 75%;
+  letter-spacing: 0.04rem;
+  color: #242121;
+  padding: 0.7rem 1.7rem;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.contacts__popup-inner .contacts__popup-button:hover {
+  color: #fff;
+  background-color: #242121;
 }
 
 .footer {
