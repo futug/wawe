@@ -39,6 +39,73 @@ function responseFirst() {
 }
 responseFirst();
 
+//!!ФИЛЬТРАЦИЯ ГАЛЛЕРЕИ НАЧАЛО!!//
+
+// const filterButtonsList = document.querySelector(".gallery__filter-buttons"),
+//   galleryItems = document.querySelectorAll(".gallery__item");
+// const filterButtons = document.querySelectorAll(".gallery__filter-btn");
+// function filter() {
+//   filterButtonsList.addEventListener("click", (e) => {
+//     const targetId = e.target.dataset.id;
+//     const target = e.target;
+//     if (target.classList.contains("gallery__filter-btn")) {
+//       filterButtons.forEach((listItem) => listItem.classList.remove("gallery__filter-btn--active"));
+//       target.classList.add("gallery__filter-btn--active");
+//     }
+
+//     console.log(targetId);
+//     switch (targetId) {
+//       case "all":
+//         getItems("gallery__item");
+//         break;
+//       case "tourists":
+//         getItems(targetId);
+//         break;
+//       case "nature":
+//         getItems(targetId);
+//         break;
+//       case "profi":
+//         getItems(targetId);
+//         break;
+//     }
+//   });
+// }
+// filter();
+// function getItems(className) {
+//   galleryItems.forEach((item) => {
+//     if (item.classList.contains(className)) {
+//       item.style.display = "block";
+//     } else {
+//       item.style.display = "none";
+//     }
+//   });
+// }
+
+const filterButtonsList = document.querySelector(".gallery__filter-buttons");
+const galleryItems = document.querySelectorAll(".gallery__item");
+
+filterButtonsList.addEventListener("click", (event) => {
+  const target = event.target.closest(".gallery__filter-btn");
+  if (!target) return;
+
+  const targetId = target.dataset.id;
+
+  filterButtonsList.querySelectorAll(".gallery__filter-btn").forEach((button) => {
+    button.classList.remove("gallery__filter-btn--active");
+  });
+
+  target.classList.add("gallery__filter-btn--active");
+
+  galleryItems.forEach((item) => {
+    item.style.display = "none";
+    if (targetId === "all" || item.classList.contains(targetId)) {
+      item.style.display = "block";
+    }
+  });
+});
+
+//!!ФИЛЬТРАЦИЯ ГАЛЛЕРЕИ КОНЕЦ!!//
+
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
