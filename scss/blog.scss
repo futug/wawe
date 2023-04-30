@@ -1,0 +1,55 @@
+.blog__slider {
+  margin-top: 14.3rem;
+}
+
+.blog__slider-item {
+  width: 100%;
+  min-height: 57.1rem;
+  background: linear-gradient(rgba(36, 33, 33, 0.5), rgba(36, 33, 33, 0.5)), url("../img/slider-item.jpg") no-repeat center / cover;
+  cursor: grab;
+}
+.blog__slider-text {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 57.1rem;
+  align-items: center;
+}
+
+.blog__slder-inner .blog__slider-title {
+  max-width: 42.85rem;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.42rem;
+  line-height: 117%;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.04rem;
+  color: #ffffff;
+}
+
+.blog__slider__slider-subtitle {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 129%;
+  letter-spacing: 0.04rem;
+
+  color: #ffffff;
+}
+
+.swiper-pagination-bullet {
+  width: 1.07rem;
+  height: 1.07rem;
+  background-color: #fff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #00b2a0;
+}
+
+.swiper-pagination {
+  margin-bottom: 5.5rem;
+}
