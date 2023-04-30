@@ -23,7 +23,7 @@
   </head>
   <body>
     <div class="mainwrapper">
-      <header class="header">
+      <header class="header" id="home">
         <div class="container">
           <div class="header__inner-top">
             <a class="header__logo-link" href="#">
@@ -31,12 +31,12 @@
             </a>
             <nav class="navigation">
               <ul class="navigation__list">
-                <li><a class="navigation__link" href="#">О нас</a></li>
-                <li><a class="navigation__link" href="#">Услуги</a></li>
-                <li><a class="navigation__link" href="#">Стоимость</a></li>
-                <li><a class="navigation__link" href="#">Блог</a></li>
-                <li><a class="navigation__link" href="#">Команда</a></li>
-                <li><a class="navigation__link" href="#">Контакты</a></li>
+                <li><a class="navigation__link" href="#about">О нас</a></li>
+                <li><a class="navigation__link" href="#features">Услуги</a></li>
+                <li><a class="navigation__link" href="#prices">Стоимость</a></li>
+                <li><a class="navigation__link" href="#blog">Блог</a></li>
+                <li><a class="navigation__link" href="#team">Команда</a></li>
+                <li><a class="navigation__link" href="#contacts">Контакты</a></li>
               </ul>
             </nav>
             <div class="header__burger">
@@ -46,12 +46,14 @@
           <div class="header__inner-bottom">
             <h1 class="header__title">wawe</h1>
             <p class="header__subtitle">Школа серфинга на канарских Островах</p>
-            <img class="header__decore" src="./img/header__decore.svg" alt="decoration_surf_board" />
+            <a class="header__inner-link" href="#about">
+              <img class="header__decore" src="./img/header__decore.svg" alt="decoration_surf_board" />
+            </a>
           </div>
         </div>
       </header>
       <main>
-        <section class="about container">
+        <section class="about container" id="about">
           <div class="title-group">
             <h2 class="title-group__title">о школе, серфинге, о канарах</h2>
           </div>
@@ -91,7 +93,7 @@
             </p>
           </div>
         </section>
-        <section class="features">
+        <section class="features" id="features">
           <div class="title-group">
             <h2 class="title-group__title">в школе вы получите</h2>
           </div>
@@ -274,7 +276,7 @@
         </section>
         <section class="blog">
           <div class="title-group">
-            <h2 class="title-group__title">блог</h2>
+            <h2 class="title-group__title" id="blog">блог</h2>
           </div>
           <div class="blog__slider swiper">
             <div class="swiper-wrapper">
@@ -394,7 +396,7 @@
         </section>
         <section class="team container">
           <div class="title-group">
-            <h2 class="title-group__title">наша команда</h2>
+            <h2 class="title-group__title" id="team">наша команда</h2>
           </div>
           <div class="team__inner">
             <div class="team__item">
@@ -416,7 +418,7 @@
         </section>
         <section class="offers">
           <div class="title-group">
-            <h2 class="title-group__title">пакеты услуг</h2>
+            <h2 class="title-group__title" id="prices">пакеты услуг</h2>
           </div>
           <div class="offers__container container">
             <div class="offers__card">
@@ -466,7 +468,7 @@
             <img class="contacts__placeholder" src="./img/map-placeholder.jpg" alt="map-placeholder" />
           </div>
           <div class="title-group">
-            <h2 class="title-group__title">оставить заявку</h2>
+            <h2 class="title-group__title" id="contacts">оставить заявку</h2>
           </div>
           <div class="contacts__form-container">
             <div class="contacts__popup hidden">
@@ -500,6 +502,12 @@
             <a class="contacts__link" href="#">YOUTUBE</a>
           </div>
         </section>
+        <a class="upward-link" href="#home">
+          <div class="upword dissapear">
+            <img class="upward__pic" src="./img/upward_arrow.png" alt="arrow to scroll upward" />
+            <p class="upward__description">Наверх</p>
+          </div>
+        </a>
       </main>
       <footer class="footer">
         <div class="footer__logo">

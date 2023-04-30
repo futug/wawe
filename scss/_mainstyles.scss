@@ -12,3 +12,20 @@
 .hidden {
   display: none !important;
 }
+
+.upword {
+  position: fixed;
+  top: 80%;
+  left: 3rem;
+  // width: 100%;
+  // height: 100%;
+  overflow: auto;
+  text-align: center;
+  transition: 0.4s linear;
+  z-index: 99;
+}
+
+.upward__pic {
+  width: 3.5rem;
+  height: 3.5rem;
+}

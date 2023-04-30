@@ -58,3 +58,26 @@ document.querySelector(".contacts__form-btn").addEventListener("click", () => {
     document.querySelector(".contacts__popup").classList.add("hidden");
   });
 });
+
+const header = document.querySelector(".header");
+const headerBottom = header.getBoundingClientRect().bottom + window.scrollY;
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= headerBottom) {
+    document.querySelector(".upword").classList.remove("dissapear");
+  } else if (window.scrollY <= headerBottom) {
+    document.querySelector(".upword").classList.add("dissapear");
+  }
+});
+
+const anchors = document.querySelectorAll('a[href*="#"]');
+for (let anchor of anchors) {
+  anchor.addEventListener("click", (e) => {
+    e.preventDefault();
+    const blockID = anchor.getAttribute("href");
+    document.querySelector("" + blockID).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+}
