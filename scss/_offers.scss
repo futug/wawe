@@ -1,0 +1,72 @@
+.offers {
+  background-color: #f8f8f8;
+}
+
+.offers__container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 14.3rem;
+  margin-top: 13rem;
+  gap: 2rem;
+}
+
+.offers__card {
+  width: 25.7rem;
+  max-width: 25.7rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //   align-items: center;
+  padding: 3.2rem 2.2rem;
+  min-height: 40.7rem;
+  .offers__card-title {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 111%;
+    color: #01353e;
+    text-align: center;
+  }
+  .offers__list {
+    margin: 0;
+    padding: 0;
+    li {
+      font-family: "Roboto Condensed";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 129%;
+      letter-spacing: 0.04rem;
+      color: #242121;
+      margin-top: 1.42rem;
+    }
+  }
+  .offers__price {
+    margin-top: 4.35rem;
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 111%;
+    color: #01353e;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem;
+    span {
+      font-size: 1.3rem;
+      line-height: 122%;
+    }
+  }
+}
+
+.offers__list > li:first-child {
+  margin-top: 0;
+}
+
+.offers__card:first-child .offers__list {
+  margin-top: -4.5rem;
+}

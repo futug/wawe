@@ -680,10 +680,6 @@
   right: 21.5%;
 }
 
-.video {
-  height: 100vh;
-}
-
 .video__wrapper {
   margin: 0 auto;
   background-color: #f8f8f8;
@@ -744,4 +740,146 @@
   letter-spacing: 0.04rem;
   color: #242121;
   margin-top: 0.35rem;
+}
+
+.team__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 14.3rem;
+  padding-bottom: 14.3rem;
+}
+.team__inner .team__pic {
+  max-width: 23.6rem;
+}
+.team__inner .team__member-name {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 100%;
+  letter-spacing: 0.6px;
+  color: #242121;
+  text-align: center;
+  margin-top: 1.8rem;
+}
+.team__inner .team__description {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 129%;
+  letter-spacing: 0.04rem;
+  color: #242121;
+  text-align: center;
+  margin-top: 0.35rem;
+}
+
+.offers {
+  background-color: #f8f8f8;
+}
+
+.offers__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 14.3rem;
+  margin-top: 13rem;
+  gap: 2rem;
+}
+
+.offers__card {
+  width: 25.7rem;
+  max-width: 25.7rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3.2rem 2.2rem;
+  min-height: 40.7rem;
+}
+.offers__card .offers__card-title {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 111%;
+  color: #01353e;
+  text-align: center;
+}
+.offers__card .offers__list {
+  margin: 0;
+  padding: 0;
+}
+.offers__card .offers__list li {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 129%;
+  letter-spacing: 0.04rem;
+  color: #242121;
+  margin-top: 1.42rem;
+}
+.offers__card .offers__price {
+  margin-top: 4.35rem;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 111%;
+  color: #01353e;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.35rem;
+}
+.offers__card .offers__price span {
+  font-size: 1.3rem;
+  line-height: 122%;
+}
+
+.offers__list > li:first-child {
+  margin-top: 0;
+}
+
+.offers__card:first-child .offers__list {
+  margin-top: -4.5rem;
+}
+
+.footer {
+  background-color: #00b2a0;
+}
+
+.footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 4.5rem;
 }

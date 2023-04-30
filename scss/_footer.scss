@@ -1,0 +1,10 @@
+.footer {
+  background-color: $decoration;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4.5rem;
+}

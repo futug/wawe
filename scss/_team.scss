@@ -1,0 +1,31 @@
+.team__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14.3rem;
+  padding-bottom: 14.3rem;
+  .team__pic {
+    max-width: 23.6rem;
+  }
+  .team__member-name {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 100%;
+    letter-spacing: 0.6px;
+    color: #242121;
+    text-align: center;
+    margin-top: 1.8rem;
+  }
+  .team__description {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 129%;
+    letter-spacing: 0.04rem;
+    color: #242121;
+    text-align: center;
+    margin-top: 0.35rem;
+  }
+}
