@@ -579,12 +579,12 @@
           </div>
         </section>
         <section class="contacts container">
-          <div class="contacts__map-container">
-            <picture>
+          <div class="contacts__map-container" id="map">
+            <!-- <picture>
               <source class="contacts__placeholder" srcset="./img/map-placeholder.webp" type="image/webp" alt="map-placeholder" />
               <source class="contacts__placeholder" srcset="./img/map-placeholder.jpg" type="image/jpeg" alt="map-placeholder" />
               <img class="contacts__placeholder" loading="lazy" src="./img/map-placeholder.jpg" alt="map-placeholder" />
-            </picture>
+            </picture> -->
           </div>
           <div class="title-group">
             <h2 class="title-group__title" id="contacts">оставить заявку</h2>
@@ -636,6 +636,7 @@
         </div>
       </footer>
     </div>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABZh8T-pTsUIdXN8oChZpqUhSbqlLOLI4&callback=initMap"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
