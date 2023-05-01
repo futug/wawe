@@ -110,26 +110,44 @@ const closeButton = document.querySelector(".gallery__lightbox-close");
 const lightBoxWrapper = document.querySelector(".gallery__lightbox");
 const lightBoxItem = document.querySelector(".gallery__lightbox-item");
 
+let currentIndex = -1; // начальное значение индекса
+
 galleryItems.forEach((item, index) => {
   item.addEventListener("click", () => {
     lightBoxWrapper.classList.remove("hidden");
     lightBoxItem.classList.remove("closed");
     lightBoxItem.srcset = item.querySelector(".gallery__item-pic").getAttribute("srcset");
-
-    const nextItem = galleryItems[index + 1];
-    if (nextItem) {
-      lightBoxItem.addEventListener("click", () => {
-        lightBoxItem.classList.add("closed");
-        setTimeout(() => {
-          lightBoxItem.src = "";
-          lightBoxItem.classList.remove("closed");
-          lightBoxItem.removeEventListener("click");
-          lightBoxItem.srcset = nextItem.querySelector(".gallery__item-pic").getAttribute("srcset");
-        }, 500);
-      });
-    }
+    currentIndex = index; // сохраняем текущий индекс
   });
 });
+
+lightBoxItem.addEventListener("click", () => {
+  lightBoxItem.classList.add("closed");
+  setTimeout(() => {
+    lightBoxItem.src = "";
+    currentIndex++; // увеличиваем индекс при повторном клике
+    if (currentIndex < galleryItems.length) {
+      // если индекс не превышает длину массива
+      lightBoxItem.srcset = galleryItems[currentIndex].querySelector(".gallery__item-pic").getAttribute("srcset");
+      lightBoxItem.classList.remove("closed");
+    } else {
+      // если превышает, закрываем lightBox
+      lightBoxWrapper.classList.add("hidden");
+    }
+  }, 500);
+});
+
+lightBoxWrapper.addEventListener("click", (event) => {
+  if (!lightBoxItem.contains(event.target)) {
+    lightBoxItem.classList.add("closed");
+    setTimeout(() => {
+      lightBoxWrapper.classList.add("hidden");
+      lightBoxItem.src = "";
+      currentIndex = -1; // сбрасываем индекс при закрытии
+    }, 800);
+  }
+});
+
 lightBoxWrapper.addEventListener("click", (event) => {
   if (!lightBoxItem.contains(event.target)) {
     lightBoxItem.classList.add("closed");

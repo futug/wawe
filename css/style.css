@@ -691,8 +691,8 @@
 }
 
 .gallery__lightbox-inner {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  cursor: pointer;
 }
 
 .gallery__lightbox-item {
@@ -700,6 +700,7 @@
           transform: scale(1);
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
+  border: 1rem solid #fff;
 }
 
 .closed {
@@ -709,7 +710,7 @@
 
 .gallery__lightbox-close {
   border-radius: 50%;
-  border: 0.1rem solid #000;
+  border: 0.1rem solid #fff;
   width: 1.5rem;
   height: 1.5rem;
   position: fixed;
@@ -719,6 +720,13 @@
   background: url("../img/close-icon.svg") no-repeat center/1rem;
   cursor: pointer;
   z-index: 999;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.gallery__lightbox-close--active {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .quote {
