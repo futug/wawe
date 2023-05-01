@@ -1,10 +1,10 @@
+//!!FADE__HEADER!!STARTS//
 (function () {
   const innerTop = document.querySelector(".header__inner-top");
   const innerBottom = document.querySelector(".header__inner-bottom");
   const header = document.querySelector(".header");
   window.onscroll = () => {
     if (window.pageYOffset > 30) {
-      // console.log("zdarova zaebal");
       innerTop.classList.add("dissapear");
       innerBottom.classList.add("dissapear");
     } else {
@@ -13,10 +13,10 @@
     }
   };
 })();
-
+//!!FADE__HEADER ENDS!!//
+//!!GALLERY__SHOWMORE STARTS!!//
 const btn = document.querySelector(".gallery__show-more-btn"),
   cards = Array.from(document.querySelectorAll(".gallery__item"));
-
 function openCatalog() {
   btn.addEventListener("click", () => {
     cards.forEach((item) => item.classList.remove("hidden"));
@@ -38,7 +38,7 @@ function responseFirst() {
   }
 }
 responseFirst();
-
+//!!GALLERY__SHOWMORE ENDS!!//
 //!!ФИЛЬТРАЦИЯ ГАЛЛЕРЕИ НАЧАЛО!!//
 
 // const filterButtonsList = document.querySelector(".gallery__filter-buttons"),
@@ -104,7 +104,42 @@ filterButtonsList.addEventListener("click", (event) => {
   });
 });
 
-//!!ФИЛЬТРАЦИЯ ГАЛЛЕРЕИ КОНЕЦ!!//
+//!!GALLERY FILTER ENDS!!//
+//!!GALLERY LIGHTBOX STARTS!!//
+const closeButton = document.querySelector(".gallery__lightbox-close");
+const lightBoxWrapper = document.querySelector(".gallery__lightbox");
+const lightBoxItem = document.querySelector(".gallery__lightbox-item");
+
+galleryItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    lightBoxWrapper.classList.remove("hidden");
+    lightBoxItem.classList.remove("closed");
+    lightBoxItem.srcset = item.querySelector(".gallery__item-pic").getAttribute("srcset");
+
+    const nextItem = galleryItems[index + 1];
+    if (nextItem) {
+      lightBoxItem.addEventListener("click", () => {
+        lightBoxItem.classList.add("closed");
+        setTimeout(() => {
+          lightBoxItem.src = "";
+          lightBoxItem.classList.remove("closed");
+          lightBoxItem.removeEventListener("click");
+          lightBoxItem.srcset = nextItem.querySelector(".gallery__item-pic").getAttribute("srcset");
+        }, 500);
+      });
+    }
+  });
+});
+
+closeButton.addEventListener("click", () => {
+  lightBoxItem.classList.add("closed");
+  setTimeout(() => {
+    lightBoxWrapper.classList.add("hidden");
+    lightBoxItem.src = "";
+  }, 800);
+});
+
+//!!GALLERY LIGHTBOX ENDS!!//
 
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
