@@ -239,3 +239,26 @@ window.addEventListener("scroll", function () {
     animateCounters();
   }
 });
+
+//!!VIDEO FRAME STARTS!!//
+
+const videoCover = document.querySelector(".video__cover");
+const videoButton = document.querySelector(".video__play-button");
+const videoWrapper = document.querySelector(".video__wrapper");
+
+videoButton.addEventListener("click", () => {
+  let iFrame = createIframe();
+  videoButton.remove();
+  videoCover.remove();
+  videoWrapper.appendChild(iFrame);
+});
+
+function createIframe() {
+  let iFrame = document.createElement("iframe");
+  iFrame.setAttribute("allowfullscreen", "");
+  iFrame.setAttribute("src", "https://www.youtube.com/embed/TeU3o12U2hM");
+  iFrame.classList.add("video__cover");
+  return iFrame;
+}
+
+//!!VIDEO FRAME ENDS!!//
