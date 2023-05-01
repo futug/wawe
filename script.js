@@ -130,13 +130,14 @@ galleryItems.forEach((item, index) => {
     }
   });
 });
-
-closeButton.addEventListener("click", () => {
-  lightBoxItem.classList.add("closed");
-  setTimeout(() => {
-    lightBoxWrapper.classList.add("hidden");
-    lightBoxItem.src = "";
-  }, 800);
+lightBoxWrapper.addEventListener("click", (event) => {
+  if (!lightBoxItem.contains(event.target)) {
+    lightBoxItem.classList.add("closed");
+    setTimeout(() => {
+      lightBoxWrapper.classList.add("hidden");
+      lightBoxItem.src = "";
+    }, 800);
+  }
 });
 
 //!!GALLERY LIGHTBOX ENDS!!//
