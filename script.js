@@ -143,7 +143,7 @@ lightBoxWrapper.addEventListener("click", (event) => {
     setTimeout(() => {
       lightBoxWrapper.classList.add("hidden");
       lightBoxItem.src = "";
-      currentIndex = -1; // сбрасываем индекс при закрытии
+      currentIndex = -1;
     }, 800);
   }
 });
@@ -157,6 +157,27 @@ lightBoxWrapper.addEventListener("click", (event) => {
     }, 800);
   }
 });
+//перелистывание стрелками//
+document.addEventListener("keydown", (event) => {
+  if (event.code === "ArrowLeft") {
+    currentIndex--;
+    if (currentIndex >= 0) {
+      lightBoxItem.srcset = galleryItems[currentIndex].querySelector(".gallery__item-pic").getAttribute("srcset");
+      lightBoxItem.classList.remove("closed");
+    } else {
+      currentIndex = 0;
+    }
+  } else if (event.code === "ArrowRight") {
+    currentIndex++;
+    if (currentIndex < galleryItems.length) {
+      lightBoxItem.srcset = galleryItems[currentIndex].querySelector(".gallery__item-pic").getAttribute("srcset");
+      lightBoxItem.classList.remove("closed");
+    } else {
+      currentIndex = galleryItems.length - 1;
+    }
+  }
+});
+//перелистывание стрелками конец//
 
 //!!GALLERY LIGHTBOX ENDS!!//
 
