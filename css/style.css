@@ -610,7 +610,7 @@
   margin-top: 7rem;
 }
 
-@media (max-width: 1800px) {
+@media (max-width: 1440px) {
   .goals__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -787,6 +787,8 @@
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
   border: 1rem solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .closed {
@@ -870,6 +872,19 @@
   right: 21.5%;
 }
 
+@media (max-width: 610px) {
+  .quote__item {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 520px) {
+  .quote__item {
+    font-size: 1.5rem;
+  }
+  .quote__item:after {
+    right: 17.5%;
+  }
+}
 .video__wrapper {
   margin: 0 auto;
   background-color: #f8f8f8;
@@ -944,6 +959,11 @@
   margin-top: 0.35rem;
 }
 
+@media (max-width: 385px) {
+  .video__achievments-score {
+    font-size: 4rem !important;
+  }
+}
 .blog__slider {
   margin-top: 14.3rem;
 }
@@ -1018,13 +1038,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 14.3rem;
   padding-bottom: 14.3rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 2rem;
 }
 .team__inner .team__pic {
   max-width: 23.6rem;
@@ -1060,9 +1081,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 14.3rem;
   margin-top: 13rem;
   gap: 2rem;
@@ -1071,8 +1092,8 @@
 }
 
 .offers__card {
-  width: 26%;
-  max-width: 26%;
+  width: 30%;
+  max-width: 30%;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1086,6 +1107,8 @@
           justify-content: space-between;
   padding: 3.2rem 2.2rem;
   min-height: 40.7rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .offers__card .offers__card-title {
   font-family: "Roboto Condensed";
@@ -1143,6 +1166,27 @@
   margin-top: -4.5rem;
 }
 
+@media (max-width: 840px) {
+  .offers__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .offers__card {
+    width: 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 690px) {
+  .offers__card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 .contacts__map-container {
   margin-top: 14.3rem;
   min-height: 45.7rem;
@@ -1157,6 +1201,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
   gap: 31px;
   position: relative;
 }
@@ -1508,6 +1554,8 @@
   background-color: #f8f8f8;
   padding-left: 4rem;
   padding-top: 3.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .contacts__text {
@@ -1600,6 +1648,31 @@
   background-color: #242121;
 }
 
+@media (max-width: 1200px) {
+  .contacts__form-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts__textarea {
+    width: 50%;
+    padding: 2rem;
+  }
+  .contacts__form {
+    margin-top: 3rem;
+    width: 50%;
+  }
+}
+@media (max-width: 900px) {
+  .contacts__textarea,
+.contacts__form {
+    width: 100%;
+  }
+}
 .footer {
   background-color: #00b2a0;
 }

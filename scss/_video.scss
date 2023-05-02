@@ -66,3 +66,13 @@
     margin-top: 0.35rem;
   }
 }
+
+@media (max-width: 385px) {
+  // .video__achievments {
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
+  .video__achievments-score {
+    font-size: 4rem !important;
+  }
+}

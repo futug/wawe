@@ -28,3 +28,19 @@
   bottom: 33%;
   right: 21.5%;
 }
+
+@media (max-width: 610px) {
+  .quote__item {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .quote__item {
+    font-size: 1.5rem;
+  }
+
+  .quote__item:after {
+    right: 17.5%;
+  }
+}

@@ -124,6 +124,7 @@
   transform: scale(1);
   transition: 0.5s linear;
   border: 1rem solid #fff;
+  box-sizing: border-box;
 }
 .closed {
   transform: scale(0);

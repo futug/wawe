@@ -4,7 +4,7 @@
 
 .offers__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-bottom: 14.3rem;
   margin-top: 13rem;
   gap: 2rem;
@@ -12,8 +12,8 @@
 }
 
 .offers__card {
-  width: 26%;
-  max-width: 26%;
+  width: 30%;
+  max-width: 30%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -21,6 +21,7 @@
   //   align-items: center;
   padding: 3.2rem 2.2rem;
   min-height: 40.7rem;
+  box-sizing: border-box;
   .offers__card-title {
     font-family: "Roboto Condensed";
     font-style: normal;
@@ -70,4 +71,22 @@
 
 .offers__card:first-child .offers__list {
   margin-top: -4.5rem;
+}
+
+@media (max-width: 840px) {
+  .offers__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offers__card {
+    width: 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 690px) {
+  .offers__card {
+    width: 100%;
+    max-width: 100%;
+  }
 }

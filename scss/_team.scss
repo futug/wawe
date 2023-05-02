@@ -1,9 +1,10 @@
 .team__inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 14.3rem;
   padding-bottom: 14.3rem;
   flex-wrap: wrap;
+  gap: 2rem;
   .team__pic {
     max-width: 23.6rem;
   }
