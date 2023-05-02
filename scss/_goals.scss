@@ -29,3 +29,17 @@
 .goals__textcontent p:first-of-type {
   margin-top: 7rem;
 }
+
+@media (max-width: 1800px) {
+  .goals__content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .goals__pic-container {
+    display: none;
+  }
+}

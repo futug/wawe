@@ -525,4 +525,5 @@ const menuBtn = document.querySelector(".header__burger"),
   menu = document.querySelector(".navigation");
 menuBtn.addEventListener("click", () => {
   menu.classList.toggle("navigation--active");
+  document.querySelector(".header__burger-item").classList.toggle("header__burger-item-close");
 });

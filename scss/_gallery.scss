@@ -146,3 +146,24 @@
 .gallery__lightbox-close--active {
   transform: rotate(45deg);
 }
+
+@media (max-width: 1200px) {
+  .gallery__photogroup {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .gallery__filter-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .gallery__item-pic {
+    width: 40rem;
+  }
+}
+@media (max-width: 1200px) {
+}
