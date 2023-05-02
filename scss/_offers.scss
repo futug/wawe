@@ -8,11 +8,12 @@
   padding-bottom: 14.3rem;
   margin-top: 13rem;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .offers__card {
-  width: 25.7rem;
-  max-width: 25.7rem;
+  width: 26%;
+  max-width: 26%;
   background-color: #fff;
   display: flex;
   flex-direction: column;

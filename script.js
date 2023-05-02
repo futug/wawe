@@ -518,3 +518,11 @@ function initMap() {
 }
 
 window.initMap = initMap;
+
+///!!!BURGER MENU!!!///
+
+const menuBtn = document.querySelector(".header__burger"),
+  menu = document.querySelector(".navigation");
+menuBtn.addEventListener("click", () => {
+  menu.classList.toggle("navigation--active");
+});

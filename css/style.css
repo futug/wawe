@@ -64,6 +64,8 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
 }
 .header__inner-top .navigation__list {
   display: -webkit-box;
@@ -86,6 +88,11 @@
 .header__inner-top .navigation__list li a {
   color: white;
   padding-bottom: 0.7rem;
+}
+
+.navigation--active {
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
 }
 
 .navigation__link:hover {
@@ -165,11 +172,86 @@
 }
 .header__burger {
   display: none;
+  cursor: pointer;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 375px) {
+  .header__inner-bottom .header__title {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .header__inner-bottom {
+    margin-top: 10rem;
+  }
+  .header__inner-bottom .header__title {
+    font-family: "Raleway";
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 8rem;
+    letter-spacing: 0.04rem;
+    text-align: center;
+    color: #242121;
+    text-transform: uppercase;
+    word-wrap: break-word;
+  }
+  .header__decore {
+    margin-top: 7rem !important;
+    width: 1.42rem;
+    height: 4.85rem;
+  }
+}
+@media (max-width: 768px) {
+  .header__inner-bottom {
+    margin-top: 15rem;
+  }
+  .header__inner-bottom .header__title {
+    font-family: "Raleway";
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 8rem;
+    letter-spacing: 0.04rem;
+    text-align: center;
+    color: #242121;
+    text-transform: uppercase;
+    word-wrap: break-word;
+  }
+  .header__inner-bottom .header__subtitle {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 992px) {
   .header__inner-top .navigation {
-    display: none;
+    display: block;
+    height: 100vh;
+    width: 50vw;
+    background: linear-gradient(45deg, #13547a, #80d0c7);
+    color: #242121;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 999;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  .header__inner-top .navigation__list li {
+    margin-top: 1rem;
+  }
+  .header__inner-top .navigation__list li a {
+    color: #242121;
+  }
+  .header__inner-top .navigation__list {
+    display: block;
+    padding-left: 50%;
   }
   .header__burger {
     display: block;
@@ -199,45 +281,25 @@
     position: absolute;
     top: -0.9rem;
   }
-}
-@media (max-width: 767px) {
-  .header__inner-bottom {
-    margin-top: 15rem;
+  .header__burger-item-close {
+    /*   top: 0; */
+    height: 0;
+    -webkit-transition: 0.1s linear;
+    transition: 0.1s linear;
   }
-  .header__inner-bottom .header__title {
-    font-family: "Raleway";
-    font-size: 7rem;
-    font-weight: 700;
-    line-height: 8rem;
-    letter-spacing: 0.04rem;
-    text-align: center;
-    color: #242121;
-    text-transform: uppercase;
-    word-wrap: break-word;
+  .header__burger-item-close:after {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: 0.4s linear;
+    transition: 0.4s linear;
   }
-  .header__inner-bottom .header__subtitle {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 375px) {
-  .header__inner-bottom {
-    margin-top: 10rem;
-  }
-  .header__inner-bottom .header__title {
-    font-family: "Raleway";
-    font-size: 5rem;
-    font-weight: 700;
-    line-height: 8rem;
-    letter-spacing: 0.04rem;
-    text-align: center;
-    color: #242121;
-    text-transform: uppercase;
-    word-wrap: break-word;
-  }
-  .header__decore {
-    margin-top: 7rem !important;
-    width: 1.42rem;
-    height: 4.85rem;
+  .header__burger-item-close:before {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transition: 0.4s linear;
+    transition: 0.4s linear;
   }
 }
 .title-group {
@@ -912,6 +974,8 @@
           justify-content: space-between;
   margin-top: 14.3rem;
   padding-bottom: 14.3rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .team__inner .team__pic {
   max-width: 23.6rem;
@@ -953,11 +1017,13 @@
   padding-bottom: 14.3rem;
   margin-top: 13rem;
   gap: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .offers__card {
-  width: 25.7rem;
-  max-width: 25.7rem;
+  width: 26%;
+  max-width: 26%;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
