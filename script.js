@@ -173,12 +173,48 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-document.querySelector(".contacts__form-btn").addEventListener("click", () => {
-  document.querySelector(".contacts__popup").classList.remove("hidden");
-  document.querySelector(".contacts__popup").addEventListener("click", () => {
-    document.querySelector(".contacts__popup").classList.add("hidden");
-  });
+//!!FORM VALIDATION STARTS!!//
+
+const form = document.querySelector(".contacts__form");
+const nameInput = document.querySelector(".contacts__form-name");
+const telInput = document.querySelector(".contacts__form-tel");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let formIsValid = true;
+  if (!/^[a-zA-Zа-яА-Я\s]+$/.test(nameInput.value)) {
+    nameInput.style.borderBottom = "1px solid #ff5454";
+    nameInput.style.color = "#ff5454";
+    nameInput.nextElementSibling.classList.remove("hidden");
+    nameInput.classList.add("error-anim");
+    formIsValid = false;
+  } else {
+    nameInput.classList.remove("error-anim");
+    nameInput.style.color = "";
+    nameInput.style.borderBottom = "";
+    nameInput.nextElementSibling.classList.add("hidden");
+  }
+  if (!/^[+0-9]{10,}$/.test(telInput.value)) {
+    telInput.classList.add("error-anim");
+    telInput.style.borderBottom = "1px solid #ff5454";
+    telInput.style.color = "#ff5454";
+    telInput.nextElementSibling.classList.remove("hidden");
+    formIsValid = false;
+  } else {
+    telInput.classList.remove("error-anim");
+    telInput.style.color = "";
+    telInput.style.borderBottom = "";
+    telInput.nextElementSibling.classList.add("hidden");
+  }
+  if (formIsValid) {
+    document.querySelector(".contacts__form-btn").addEventListener("click", () => {
+      document.querySelector(".contacts__popup").classList.remove("hidden");
+      document.querySelector(".contacts__popup").addEventListener("click", () => {
+        document.querySelector(".contacts__popup").classList.add("hidden");
+      });
+    });
+  }
 });
+//!!FORM VALIDATION ENDS!!//
 
 const header = document.querySelector(".header");
 const headerBottom = header.getBoundingClientRect().bottom + window.scrollY;

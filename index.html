@@ -597,18 +597,25 @@
               </div>
             </div>
             <form class="contacts__form" action="#">
-              <input class="contacts__form-name" type="text" placeholder="Имя" />
-              <input class="contacts__form-tel" type="text" placeholder="Телефон" />
-              <textarea
-                class="contacts__form-message"
-                name=""
-                id=""
-                cols="30"
-                rows="10"
-                placeholder="Оставьте сообщение, и мы свяжемся с Вами в ближайшее время"
-              ></textarea>
-              <button class="contacts__form-btn" type="button">Отправить</button>
+              <div>
+                <input class="contacts__form-name" type="text" placeholder="Имя" />
+                <span class="error-msg hidden">Ошибка заполнения формы</span>
+              </div>
+              <div>
+                <input class="contacts__form-tel" type="text" placeholder="Телефон" />
+                <span class="error-msg hidden">Ошибка заполнения формы</span>
+              </div>
+              <div>
+                <textarea
+                  class="contacts__form-message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Оставьте сообщение, и мы свяжемся с Вами в ближайшее время"
+                ></textarea>
+              </div>
+              <button class="contacts__form-btn" type="submit">Отправить</button>
             </form>
+
             <div class="contacts__textarea">
               <p class="contacts__text">Есть вопрос? Вы можете связаться с нами:</p>
               <p class="contacts__text">WhatsApp, Viber, Telegram +3 467 486-37-88</p>
