@@ -1348,6 +1348,27 @@
   color: #00b2a0;
 }
 
+.contacts__form-name--error::-webkit-input-placeholder, .contacts__form-tel--error::-webkit-input-placeholder {
+  color: #ff5454 !important;
+}
+
+.contacts__form-name--error::-moz-placeholder, .contacts__form-tel--error::-moz-placeholder {
+  color: #ff5454 !important;
+}
+
+.contacts__form-name--error:-ms-input-placeholder, .contacts__form-tel--error:-ms-input-placeholder {
+  color: #ff5454 !important;
+}
+
+.contacts__form-name--error::-ms-input-placeholder, .contacts__form-tel--error::-ms-input-placeholder {
+  color: #ff5454 !important;
+}
+
+.contacts__form-name--error::placeholder,
+.contacts__form-tel--error::placeholder {
+  color: #ff5454 !important;
+}
+
 .contacts__form-tel:focus::-webkit-input-placeholder {
   opacity: 0;
 }

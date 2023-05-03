@@ -76,6 +76,11 @@
   letter-spacing: 0.04rem;
   color: #00b2a0;
 }
+
+.contacts__form-name--error::placeholder,
+.contacts__form-tel--error::placeholder {
+  color: #ff5454 !important;
+}
 .contacts__form-tel:focus::placeholder {
   opacity: 0;
 }

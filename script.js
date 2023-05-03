@@ -207,6 +207,7 @@ form.addEventListener("submit", (event) => {
     nameInput.style.color = "#ff5454";
     nameInput.nextElementSibling.classList.remove("hidden");
     nameInput.classList.add("error-anim");
+    nameInput.classList.add("contacts__form-name--error");
     formIsValid = false;
   } else {
     nameInput.classList.remove("error-anim");
@@ -219,6 +220,7 @@ form.addEventListener("submit", (event) => {
     telInput.style.borderBottom = "1px solid #ff5454";
     telInput.style.color = "#ff5454";
     telInput.nextElementSibling.classList.remove("hidden");
+    telInput.classList.add("contacts__form-tel--error");
     formIsValid = false;
   } else {
     telInput.classList.remove("error-anim");
